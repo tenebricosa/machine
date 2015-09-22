@@ -1,0 +1,399 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Shower Presentation Engine</h1>
+		<p>Yours Truly, Famous Inc.</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>Machine Translation / Машинный Перевод</h2>
+		<p>Brought to you by <a href="https://twitter.com/tenebricosa">Anastasiya Sakharova</a></p>
+		<img src="pictures/cover.jpg" alt="">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:-20px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Определения</h2>
+		<p>Машинный перевод (Machine Translation) - это технология связного перевода текстов компьютерной программой с одного естественного языка на другой.</p>
+		<p class="next">Автоматизированный перевод (Computer-Aided Translation) - технология перевода текстов человеком с использованием компьютерных технологий.</p>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>1947</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Эксперимент в Джорджтауне</h2>
+		<img src="pictures/george.jpg" alt="">
+		<style>
+			.slide img {
+				position: absolute;
+				left: 25%;
+			}
+		</style>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>1967</h2>
+		<h2 class="next">:(</h2>
+		<style>
+			 .slide h2.next {
+				left: 20% !important;
+				top: 48% !important;
+			}
+		</style>
+	</div></section>
+	<section class="slide cover"><div>
+		<img src="pictures/jobs.jpeg"  class="img1" alt="" width="100%">
+		<img src="pictures/ibm.jpg"  class="img2" alt="" width="100%">
+		<img src="pictures/gates.jpg"  class="img3" alt="" width="100%">
+		<img src="pictures/mic.jpg"  class="img4" alt="" width="100%">
+		<style>
+			img.img1 {
+				animation: change1 15s infinite;
+			}
+			img.img2 {
+				animation: change2 15s infinite;
+			}
+			img.img3 {
+				animation: change3 15s infinite;
+			}
+			img.img4 {
+				animation: change4 30s infinite;
+			}
+			@keyframes change1 {
+				0% {
+					opacity: 0;
+				}
+				25% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				75% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes change2 {
+				0% {
+					opacity: 0;
+				}
+				25% {
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
+				}
+				75% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes change3 {
+				0% {
+					opacity: 0;
+				}
+				25% {
+					opacity: 0;
+				}
+				50% {
+					opacity: 0;
+				}
+				75% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes change4 {
+				0% {
+					opacity: 1;
+				}
+				12.5% {
+					opacity: 0;
+				}
+				37.5% {
+					opacity: 0;
+				}
+				50% {
+					opacity: 1;
+				}
+				62.5% {
+					opacity: 0;
+				}
+				87.5% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+		</style>
+	</div></section>
+	<section class="slide cover"><div>
+		<h2 class="pic-title">Наши дни</h2>
+		<img src="pictures/futurama.jpg" alt="">
+		<style>
+			.pic-title {
+				color:#fff !important;
+				font-size: 150px !important;
+				top:0 !important;
+				left: 24% !important;
+				position: absolute;
+			}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Подходы к построению алгоритмов машинного перевода</h2>
+		<ol>
+			<li>Основанный на правилах (rule-based - RBMT)</li>
+			<li>Основанный на статистике (statistical-based - SMT)</li>
+		</ol>
+		<p class="note">Также существует понятие гибридного подхода, но фактически только в теории ¯\_(ツ)_/¯</p>
+		<style>
+			.note {
+				margin: 160px 0 !important;
+			}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Машинный перевод на основе правил</h2>
+		<ol>
+			<li>Системы пословного перевода</li>
+			<li>Трансферные системы (Transfer)</li>
+			<li>Интерлингвистические системы (Interlingua)</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>1. Морфологический анализ текста</h2>
+		<p class="kit"><strong>Мальчики спят.</strong></p>
+		<mark>МАЛЬЧИК s,мн,им СПАТЬ v,несов,непрош,изъяв,3-л,мн</mark>
+		<style>
+			.kit {
+			    margin: 100px 0 10px !important;
+			}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>2. Синтаксический анализ текста</h2>
+		<img src="pictures/sint.png" alt="" class="etap">
+		<style>
+			.etap {
+			    margin: 100px 0 0 !important;
+					left: 20% !important;
+			}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>3. Перевод синтаксической структуры</h2>
+		<img src="pictures/trans.png" alt="" class="etap" style="left: 25% !important;">
+		<style>
+			.etap {
+			    margin: 100px 0 0 !important;
+					left: 20% !important;
+			}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>4. Нормализация синтаксической структуры</h2>
+		<img src="pictures/add.png" alt="" class="etap" style="left: 25% !important;">
+		<style>
+			.etap {
+			    margin: 100px 0 0 !important;
+					left: 20% !important;
+			}
+		</style>
+	</div></section>
+</div></section>
+<section class="slide"><div>
+	<h2>5. Получение морфологической структуры</h2>
+		<mark style="margin: 100px 0 10px !important;display:block;">THE Art BOYS s,pl BE v,prs,pl SLEEP v,ing</mark>
+		<p style=""><strong>The boys are sleeping.</strong></p>
+</div></section>
+<section class="slide"><div>
+	<h2 style="margin: 0 0 10px !important;">Плюсы</h2>
+	<ol>
+		<li>Синтаксическая и морфологическая точность</li>
+		<li>Стабильность и предсказуемость результата</li>
+		<li>Возможность настройки на предметную область</li>
+	</ol>
+		<h2 style="margin: 0 0 10px !important;">Минусы</h2>
+		<ol>
+			<li>Трудоемкость и длительность разработки</li>
+			<li>Необходимость поддерживать и актуализировать лингвистические БД</li>
+			<li>«Машинный акцент» при переводе</li>
+		</ol>
+</div></section>
+<section class="slide"><div>
+	<h2>Машинный перевод на основе статистики</h2>
+	<ol>
+		<li>По словам (Word-based translation)</li>
+		<li>По фразам (Phrase-based translation)</li>
+		<li>По синтаксису (Syntax-based translation)</li>
+		<li>По иерархическим фразам (Hierarchical phrase-based translation)</li>
+	</ol>
+</div></section>
+<section class="slide cover"><div style="background-color: #f9f9f7;">
+	<img src="pictures/ya.png" alt="" height="100%" style="z-index:0;top:1%;left:28%;">
+</div></section>
+<section class="slide"><div>
+	<h2 style="margin: 0 0 10px !important;">Плюсы</h2>
+	<ol>
+		<li>Быстрая настройка</li>
+		<li>Легко добавлять новые направления перевода</li>
+		<li>Гладкость перевода</li>
+	</ol>
+		<h2 style="margin: 0 0 10px !important;">Минусы</h2>
+		<ol>
+			<li>«Дефицит» параллельных ресурсов</li>
+			<li>Многочисленные грамматические ошибки</li>
+			<li>Нестабильность перевода</li>
+		</ol>
+</div></section>
+<section class="slide shout"><div>
+	<h2>Проблемки</h2>
+	<img class="duck" src="pictures/duck.jpg" alt="">
+	<style>
+		.duck {
+			width: 200px;
+	    bottom: 0;
+	    left: 70% !important;
+		}
+	</style>
+</div></section>
+<section class="slide"><div>
+	<h2>Многозначность слов</h2>
+	<img class="epic" src="pictures/epic.png" alt="" style="
+    left: 10%;
+    width: 85%;
+    top: 40%;">
+</div></section>
+<section class="slide"><div>
+	<h2>Неоднозначность языка</h2>
+	<p style="margin: 0px 0 10px;">Автобус обогнал троллейбус.</p>
+	<p style="margin: 0px 0 10px;" class="next">В классе не было ни души.</p>
+	<p style="margin: 0px 0 10px;" class="next">Да нет наверное.</p>
+</div></section>
+<section class="slide"><div>
+	<h2>Особые языковые конструкции</h2>
+	<p style="margin: 0px 0 10px;">Ключ на столе</p>
+	<p style="margin: 0px 0 10px;" class="next">The key is on the table.</p>
+	<p style="margin: 0px 0 10px;" class="next">Ключ в столе.</p>
+	<p style="margin: 0px 0 10px;" class="next">???</p>
+	<p style="margin: 0px 0 10px;" class="next">The key is in the desk, in the drawer, in the platen...</p>
+</div></section>
+<section class="slide"><div>
+	<h2>Контроль смысла</h2>
+	<p>Microsoft компания получает много откликов после появления Окон 95. Мы
+выявили, что много пользователей встретили проблему мыши. В этом
+документе Служба Техничного Упора Microsoft компании сводит вместе всю
+полезную информацию о возможных проблемах с мышами и гуртовщиками мыши и
+забота-стреляние.</p>
+</div></section>
+<section class="slide"><div>
+	<h2>Специфические конструкции</h2>
+	<img class="" src="pictures/ali.jpg" alt="" style="
+	left: 16%;
+	width: 70%;
+	top: 29%;">
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>Гибридный машинный перевод</h2>
+		<img class="party" src="pictures/party.png" alt="">
+		<style>
+			.party {
+				width: 200px;
+		    bottom: 0;
+		    left: 80% !important;
+			}
+		</style>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Гибридный машинный перевод</h2>
+		<ol>
+			<li>Лингвистический анализ входного предложения</li>
+			<li>Порождение вариантов перевода</li>
+			<li>Использование статистических технологий</li>
+			<li>Оценка и выбор лучшего варианта перевода с использованием Языковой модели</li>
+		</ol>
+	</div></section>
+	<section class="slide cover" id="HTML5"><div>
+		<h2>HMT</h2>
+		<img src="pictures/html5.jpg" alt="HTML5">
+		<style>
+		#HTML5 h2 {
+	    position: absolute;
+	    bottom: 120px;
+	    padding: 0 20px;
+	    background: #E34C26;
+	    color: #FFF;
+	    -webkit-box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);
+	    -moz-box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);
+	    box-shadow: 16px 16px 40px rgba(0, 0, 0, 0.3);
+	    font-size: 75px;
+		}
+		</style>
+	</div></section>
+	<section class="slide active" id="ThankYou"><div>
+		<h2>Машинный перевод</h2>
+		<p>Анастасия Сахарова</p>
+		<ul>
+			<li><a href="https://twitter.com/tenebricosa">twitter.com/tenebricosa</a></li>
+			<li><a href="mailto:sakharova@skbkontur.ru">sakharova@skbkontur.ru</a></li>
+		</ul>
+		<p>Презентация будет тут: <a href="http://tenebricosa.github.io/machine/">http://tenebricosa.github.io/machine/</a></p>
+		<style>
+		#ThankYou {
+		    background: #FFF url(pictures/yoda.png) 700px 150px no-repeat;
+			}
+
+			#ThankYou ul>li:before {
+			    content: '\2014\00A0\00A0';
+			}
+		</style>
+	</div></section>
+
+
+
+	<p class="badge"><a href="https://github.com/shower/shower">Fork me on Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
